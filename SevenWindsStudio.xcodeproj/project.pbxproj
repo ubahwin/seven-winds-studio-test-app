@@ -24,7 +24,12 @@
 		B742498D2B34179F008040AF /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742498C2B34179F008040AF /* LoginResponse.swift */; };
 		B74249902B341B34008040AF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742498F2B341B34008040AF /* LoginViewModel.swift */; };
 		B74249942B342488008040AF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74249932B342488008040AF /* LoginView.swift */; };
-		B7D081FF2B342AB700556883 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D081FE2B342AB700556883 /* LocationResponse.swift */; };
+		B7662CEE2B34704000855958 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7662CED2B34704000855958 /* MapView.swift */; };
+		B7662CF02B34704F00855958 /* CafeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7662CEF2B34704F00855958 /* CafeListView.swift */; };
+		B7662CF42B34708B00855958 /* CafesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7662CF32B34708B00855958 /* CafesViewModel.swift */; };
+		B7662CF72B3473F200855958 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7662CF62B3473F200855958 /* Cafe.swift */; };
+		B7662CF92B34744E00855958 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7662CF82B34744E00855958 /* Coffee.swift */; };
+		B7D081FF2B342AB700556883 /* CafesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D081FE2B342AB700556883 /* CafesResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +52,12 @@
 		B742498F2B341B34008040AF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B74249912B34215D008040AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B74249932B342488008040AF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		B7D081FE2B342AB700556883 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
+		B7662CED2B34704000855958 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B7662CEF2B34704F00855958 /* CafeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListView.swift; sourceTree = "<group>"; };
+		B7662CF32B34708B00855958 /* CafesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesViewModel.swift; sourceTree = "<group>"; };
+		B7662CF62B3473F200855958 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		B7662CF82B34744E00855958 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		B7D081FE2B342AB700556883 /* CafesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +90,10 @@
 		B742492D2B341538008040AF /* SevenWindsStudio */ = {
 			isa = PBXGroup;
 			children = (
+				B7662CF52B3473A900855958 /* Model */,
 				B74249922B342478008040AF /* View */,
 				B742498E2B341B21008040AF /* ViewModel */,
-				B74249592B3415CA008040AF /* NetworkLayer */,
+				B74249592B3415CA008040AF /* Network */,
 				B742492E2B341538008040AF /* SevenWindsStudioApp.swift */,
 				B74249582B341584008040AF /* Resourses */,
 			);
@@ -107,7 +118,7 @@
 			path = Resourses;
 			sourceTree = "<group>";
 		};
-		B74249592B3415CA008040AF /* NetworkLayer */ = {
+		B74249592B3415CA008040AF /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				B742495A2B3415CA008040AF /* Encoding */,
@@ -116,7 +127,7 @@
 				B74249622B3415CA008040AF /* Model */,
 				B742496D2B3415CA008040AF /* Service */,
 			);
-			path = NetworkLayer;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		B742495A2B3415CA008040AF /* Encoding */ = {
@@ -149,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				B742498C2B34179F008040AF /* LoginResponse.swift */,
-				B7D081FE2B342AB700556883 /* LocationResponse.swift */,
+				B7D081FE2B342AB700556883 /* CafesResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				B742498F2B341B34008040AF /* LoginViewModel.swift */,
+				B7662CF32B34708B00855958 /* CafesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -179,8 +191,19 @@
 			children = (
 				B74249302B341538008040AF /* ContentView.swift */,
 				B74249932B342488008040AF /* LoginView.swift */,
+				B7662CED2B34704000855958 /* MapView.swift */,
+				B7662CEF2B34704F00855958 /* CafeListView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B7662CF52B3473A900855958 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7662CF62B3473F200855958 /* Cafe.swift */,
+				B7662CF82B34744E00855958 /* Coffee.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +292,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint --strict --config ../.swiftlint.yml\nelse\n  echo \"error: SwiftLint does not exist\"\n  exit 1\nfi\n";
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint --strict --config ./.swiftlint.yml\nelse\n  echo \"error: SwiftLint does not exist\"\n  exit 1\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -285,15 +308,20 @@
 				B74249832B3415CA008040AF /* HTTPTask.swift in Sources */,
 				B74249772B3415CA008040AF /* SevenWindsStudioEndpoint.swift in Sources */,
 				B742498D2B34179F008040AF /* LoginResponse.swift in Sources */,
+				B7662CF02B34704F00855958 /* CafeListView.swift in Sources */,
+				B7662CF72B3473F200855958 /* Cafe.swift in Sources */,
 				B74249902B341B34008040AF /* LoginViewModel.swift in Sources */,
+				B7662CF42B34708B00855958 /* CafesViewModel.swift in Sources */,
 				B74249862B3415CA008040AF /* EndpointType.swift in Sources */,
-				B7D081FF2B342AB700556883 /* LocationResponse.swift in Sources */,
+				B7662CEE2B34704000855958 /* MapView.swift in Sources */,
+				B7D081FF2B342AB700556883 /* CafesResponse.swift in Sources */,
 				B74249842B3415CA008040AF /* HTTPMethod.swift in Sources */,
 				B74249852B3415CA008040AF /* Router.swift in Sources */,
 				B74249732B3415CA008040AF /* ParameterEncoding.swift in Sources */,
 				B74249312B341538008040AF /* ContentView.swift in Sources */,
 				B742492F2B341538008040AF /* SevenWindsStudioApp.swift in Sources */,
 				B74249822B3415CA008040AF /* NetworkRouter.swift in Sources */,
+				B7662CF92B34744E00855958 /* Coffee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -400,7 +428,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -409,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

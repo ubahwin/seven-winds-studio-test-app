@@ -2,16 +2,19 @@ import Foundation
 import SwiftUI
 
 class LoginViewModel: ObservableObject {
-    private let networkManager: NetworkManager
+    private let networkManager = NetworkManager()
     @AppStorage("isEntered") var isEntered: Bool = false
-    @AppStorage("token") var token: String?
-
-    init() {
-        self.networkManager = NetworkManager()
-    }
 
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+
+    func saveToken(token: String, lifetime: Int) {
+        let currentDate = Date()
+        let expirationDate = currentDate.addingTimeInterval(TimeInterval(lifetime))
+
+        UserDefaults.standard.setValue(token, forKey: "token")
+        UserDefaults.standard.set(expirationDate, forKey: "expirationDate")
     }
 
     func login(login: String, password: String) {
@@ -21,10 +24,10 @@ class LoginViewModel: ObservableObject {
                 return
             }
 
-            if let token = success?.token {
-                UserDefaults.standard.set(token, forKey: "token")
+            if let token = success?.token, let tokenLifetime = success?.tokenLifetime {
+                self.saveToken(token: token, lifetime: tokenLifetime)
+
                 DispatchQueue.main.async {
-                    self.token = token
                     self.isEntered = true
                 }
             }

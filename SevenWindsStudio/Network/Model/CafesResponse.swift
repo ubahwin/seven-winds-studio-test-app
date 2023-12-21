@@ -1,11 +1,13 @@
 import Foundation
 
-struct LocationResponse: Codable {
+struct CafeResponse: Codable {
     let id: Int?
     let name: String?
     let point: PointResponse?
 }
 
 struct PointResponse: Codable {
-    let latitude, longitude: Double?
+    let latitude, longitude: String?
 }
+
+typealias CafesResponse = [CafeResponse]

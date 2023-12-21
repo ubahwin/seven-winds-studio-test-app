@@ -2,7 +2,7 @@ import Foundation
 
 public enum SevenWindsStudioApi {
     case auth(login: String, password: String)
-    case getLocations
+    case loadCafes
 }
 
 extension SevenWindsStudioApi: EndpointType {
@@ -13,7 +13,7 @@ extension SevenWindsStudioApi: EndpointType {
 
     var path: String {
         switch self {
-        case .getLocations: return "locations"
+        case .loadCafes: return "locations"
         case .auth: return "auth/login"
         }
     }
@@ -21,13 +21,17 @@ extension SevenWindsStudioApi: EndpointType {
     var httpMethod: HTTPMethod {
         switch self {
         case .auth: return .post
-
         default: return .get
         }
     }
 
     var headers: HTTPHeaders? {
         switch self {
+        case .loadCafes:
+            return [
+                "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "token") ?? "")",
+                "User-Agent": "PostmanRuntime/7.36.0"
+            ]
         default: return ["User-Agent": "PostmanRuntime/7.36.0"]
         }
     }

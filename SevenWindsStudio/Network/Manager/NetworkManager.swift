@@ -44,6 +44,7 @@ class NetworkManager {
 
             do {
                 let apiResponse = try JSONDecoder().decode(T.self, from: responseData)
+                print(apiResponse)
                 completion(apiResponse, nil)
             } catch let error {
                 print("Error in decode for: \(T.self)\nError: \(error)")
@@ -70,6 +71,14 @@ class NetworkManager {
         completion: @escaping (_ success: LoginResponse?, _ error: String?) -> Void
     ) {
         router.request(.auth(login: login, password: password)) { data, response, error in
+            self.processResponse(data: data, response: response, error: error, completion: completion)
+        }
+    }
+
+    func loadCafes(
+        completion: @escaping (_ success: CafesResponse?, _ error: String?) -> Void
+    ) {
+        router.request(.loadCafes) { data, response, error in
             self.processResponse(data: data, response: response, error: error, completion: completion)
         }
     }

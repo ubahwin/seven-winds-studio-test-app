@@ -1,22 +1,47 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("isEntered") var isEntered: Bool?
-    @AppStorage("token") var token: String?
+    @StateObject private var cafesVM = CafesViewModel()
+
+    @State var selectedTab: Tab = .map
+    enum Tab: Hashable {
+        case map, cafeList
+    }
 
     var body: some View {
-        VStack {
-            Text("К сожалению ваш API сам не знает, куда вставлять токен")
-            Image("screenshot")
-            if let token = token {
-                Text("Кстати вот он: \(token)")
+        NavigationStack {
+            TabView {
+                Group {
+                    MapView(cafesVM: cafesVM)
+                        .tabItem {
+                            Image(systemName: "map")
+                            Text("Карта")
+                        }
+                        .tag(Tab.map)
+                    CafeListView(cafesVM: cafesVM)
+                        .tabItem {
+                            Image(systemName: "list.bullet.clipboard")
+                            Text("Кафе")
+                        }
+                        .tag(Tab.cafeList)
+                }
+                .toolbarBackground(.visible, for: .tabBar)
             }
-            Button("Выход") {
-                isEntered = false
+            .navigationTitle("Кафе")
+            .toolbar {
+                ToolbarItemGroup(placement: .secondaryAction) {
+                    Button("Обновить") {
+                        cafesVM.loadCafes()
+                    }
+                    Button("Выйти", role: .destructive) {
+                        cafesVM.isEntered = false
+                    }
+                }
             }
-            .padding()
         }
-        .padding()
+        .onAppear {
+            cafesVM.loadCafes()
+        }
     }
 }
 
