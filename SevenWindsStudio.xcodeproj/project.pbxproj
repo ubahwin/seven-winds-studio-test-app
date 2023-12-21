@@ -11,27 +11,21 @@
 		B74249312B341538008040AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74249302B341538008040AF /* ContentView.swift */; };
 		B74249332B34153A008040AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74249322B34153A008040AF /* Assets.xcassets */; };
 		B74249362B34153A008040AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74249352B34153A008040AF /* Preview Assets.xcassets */; };
-		B74249402B34153A008040AF /* SevenWindsStudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742493F2B34153A008040AF /* SevenWindsStudioTests.swift */; };
-		B742494A2B34153A008040AF /* SevenWindsStudioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74249492B34153A008040AF /* SevenWindsStudioUITests.swift */; };
-		B742494C2B34153A008040AF /* SevenWindsStudioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742494B2B34153A008040AF /* SevenWindsStudioUITestsLaunchTests.swift */; };
+		B74249732B3415CA008040AF /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742495B2B3415CA008040AF /* ParameterEncoding.swift */; };
+		B74249742B3415CA008040AF /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742495C2B3415CA008040AF /* URLParameterEncoder.swift */; };
+		B74249752B3415CA008040AF /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742495D2B3415CA008040AF /* JSONParameterEncoder.swift */; };
+		B74249762B3415CA008040AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742495F2B3415CA008040AF /* NetworkManager.swift */; };
+		B74249772B3415CA008040AF /* SevenWindsStudioEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74249612B3415CA008040AF /* SevenWindsStudioEndpoint.swift */; };
+		B74249822B3415CA008040AF /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742496E2B3415CA008040AF /* NetworkRouter.swift */; };
+		B74249832B3415CA008040AF /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742496F2B3415CA008040AF /* HTTPTask.swift */; };
+		B74249842B3415CA008040AF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74249702B3415CA008040AF /* HTTPMethod.swift */; };
+		B74249852B3415CA008040AF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74249712B3415CA008040AF /* Router.swift */; };
+		B74249862B3415CA008040AF /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74249722B3415CA008040AF /* EndpointType.swift */; };
+		B742498D2B34179F008040AF /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742498C2B34179F008040AF /* LoginResponse.swift */; };
+		B74249902B341B34008040AF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B742498F2B341B34008040AF /* LoginViewModel.swift */; };
+		B74249942B342488008040AF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74249932B342488008040AF /* LoginView.swift */; };
+		B7D081FF2B342AB700556883 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D081FE2B342AB700556883 /* LocationResponse.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B742493C2B34153A008040AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B74249232B341538008040AF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B742492A2B341538008040AF;
-			remoteInfo = SevenWindsStudio;
-		};
-		B74249462B34153A008040AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B74249232B341538008040AF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B742492A2B341538008040AF;
-			remoteInfo = SevenWindsStudio;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B742492B2B341538008040AF /* SevenWindsStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SevenWindsStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,29 +33,25 @@
 		B74249302B341538008040AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B74249322B34153A008040AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B74249352B34153A008040AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B742493B2B34153A008040AF /* SevenWindsStudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SevenWindsStudioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B742493F2B34153A008040AF /* SevenWindsStudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenWindsStudioTests.swift; sourceTree = "<group>"; };
-		B74249452B34153A008040AF /* SevenWindsStudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SevenWindsStudioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B74249492B34153A008040AF /* SevenWindsStudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenWindsStudioUITests.swift; sourceTree = "<group>"; };
-		B742494B2B34153A008040AF /* SevenWindsStudioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenWindsStudioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B742495B2B3415CA008040AF /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		B742495C2B3415CA008040AF /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		B742495D2B3415CA008040AF /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		B742495F2B3415CA008040AF /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B74249612B3415CA008040AF /* SevenWindsStudioEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SevenWindsStudioEndpoint.swift; sourceTree = "<group>"; };
+		B742496E2B3415CA008040AF /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		B742496F2B3415CA008040AF /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		B74249702B3415CA008040AF /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		B74249712B3415CA008040AF /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B74249722B3415CA008040AF /* EndpointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		B742498C2B34179F008040AF /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		B742498F2B341B34008040AF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B74249912B34215D008040AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B74249932B342488008040AF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B7D081FE2B342AB700556883 /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B74249282B341538008040AF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B74249382B34153A008040AF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B74249422B34153A008040AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -75,8 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				B742492D2B341538008040AF /* SevenWindsStudio */,
-				B742493E2B34153A008040AF /* SevenWindsStudioTests */,
-				B74249482B34153A008040AF /* SevenWindsStudioUITests */,
 				B742492C2B341538008040AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,8 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				B742492B2B341538008040AF /* SevenWindsStudio.app */,
-				B742493B2B34153A008040AF /* SevenWindsStudioTests.xctest */,
-				B74249452B34153A008040AF /* SevenWindsStudioUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,10 +80,11 @@
 		B742492D2B341538008040AF /* SevenWindsStudio */ = {
 			isa = PBXGroup;
 			children = (
+				B74249922B342478008040AF /* View */,
+				B742498E2B341B21008040AF /* ViewModel */,
+				B74249592B3415CA008040AF /* NetworkLayer */,
 				B742492E2B341538008040AF /* SevenWindsStudioApp.swift */,
-				B74249302B341538008040AF /* ContentView.swift */,
-				B74249322B34153A008040AF /* Assets.xcassets */,
-				B74249342B34153A008040AF /* Preview Content */,
+				B74249582B341584008040AF /* Resourses */,
 			);
 			path = SevenWindsStudio;
 			sourceTree = "<group>";
@@ -110,21 +97,90 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B742493E2B34153A008040AF /* SevenWindsStudioTests */ = {
+		B74249582B341584008040AF /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				B742493F2B34153A008040AF /* SevenWindsStudioTests.swift */,
+				B74249912B34215D008040AF /* Info.plist */,
+				B74249342B34153A008040AF /* Preview Content */,
+				B74249322B34153A008040AF /* Assets.xcassets */,
 			);
-			path = SevenWindsStudioTests;
+			path = Resourses;
 			sourceTree = "<group>";
 		};
-		B74249482B34153A008040AF /* SevenWindsStudioUITests */ = {
+		B74249592B3415CA008040AF /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				B74249492B34153A008040AF /* SevenWindsStudioUITests.swift */,
-				B742494B2B34153A008040AF /* SevenWindsStudioUITestsLaunchTests.swift */,
+				B742495A2B3415CA008040AF /* Encoding */,
+				B742495E2B3415CA008040AF /* Manager */,
+				B74249602B3415CA008040AF /* Endpoint */,
+				B74249622B3415CA008040AF /* Model */,
+				B742496D2B3415CA008040AF /* Service */,
 			);
-			path = SevenWindsStudioUITests;
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		B742495A2B3415CA008040AF /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				B742495B2B3415CA008040AF /* ParameterEncoding.swift */,
+				B742495C2B3415CA008040AF /* URLParameterEncoder.swift */,
+				B742495D2B3415CA008040AF /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		B742495E2B3415CA008040AF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B742495F2B3415CA008040AF /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B74249602B3415CA008040AF /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				B74249612B3415CA008040AF /* SevenWindsStudioEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		B74249622B3415CA008040AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B742498C2B34179F008040AF /* LoginResponse.swift */,
+				B7D081FE2B342AB700556883 /* LocationResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B742496D2B3415CA008040AF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B742496E2B3415CA008040AF /* NetworkRouter.swift */,
+				B742496F2B3415CA008040AF /* HTTPTask.swift */,
+				B74249702B3415CA008040AF /* HTTPMethod.swift */,
+				B74249712B3415CA008040AF /* Router.swift */,
+				B74249722B3415CA008040AF /* EndpointType.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B742498E2B341B21008040AF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B742498F2B341B34008040AF /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B74249922B342478008040AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B74249302B341538008040AF /* ContentView.swift */,
+				B74249932B342488008040AF /* LoginView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,51 +193,18 @@
 				B74249272B341538008040AF /* Sources */,
 				B74249282B341538008040AF /* Frameworks */,
 				B74249292B341538008040AF /* Resources */,
+				B727FDD62B343023002F9A28 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SevenWindsStudio;
+			packageProductDependencies = (
+			);
 			productName = SevenWindsStudio;
 			productReference = B742492B2B341538008040AF /* SevenWindsStudio.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B742493A2B34153A008040AF /* SevenWindsStudioTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B74249522B34153A008040AF /* Build configuration list for PBXNativeTarget "SevenWindsStudioTests" */;
-			buildPhases = (
-				B74249372B34153A008040AF /* Sources */,
-				B74249382B34153A008040AF /* Frameworks */,
-				B74249392B34153A008040AF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B742493D2B34153A008040AF /* PBXTargetDependency */,
-			);
-			name = SevenWindsStudioTests;
-			productName = SevenWindsStudioTests;
-			productReference = B742493B2B34153A008040AF /* SevenWindsStudioTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B74249442B34153A008040AF /* SevenWindsStudioUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B74249552B34153A008040AF /* Build configuration list for PBXNativeTarget "SevenWindsStudioUITests" */;
-			buildPhases = (
-				B74249412B34153A008040AF /* Sources */,
-				B74249422B34153A008040AF /* Frameworks */,
-				B74249432B34153A008040AF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B74249472B34153A008040AF /* PBXTargetDependency */,
-			);
-			name = SevenWindsStudioUITests;
-			productName = SevenWindsStudioUITests;
-			productReference = B74249452B34153A008040AF /* SevenWindsStudioUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -196,14 +219,6 @@
 					B742492A2B341538008040AF = {
 						CreatedOnToolsVersion = 15.1;
 					};
-					B742493A2B34153A008040AF = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = B742492A2B341538008040AF;
-					};
-					B74249442B34153A008040AF = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = B742492A2B341538008040AF;
-					};
 				};
 			};
 			buildConfigurationList = B74249262B341538008040AF /* Build configuration list for PBXProject "SevenWindsStudio" */;
@@ -215,13 +230,13 @@
 				Base,
 			);
 			mainGroup = B74249222B341538008040AF;
+			packageReferences = (
+			);
 			productRefGroup = B742492C2B341538008040AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B742492A2B341538008040AF /* SevenWindsStudio */,
-				B742493A2B34153A008040AF /* SevenWindsStudioTests */,
-				B74249442B34153A008040AF /* SevenWindsStudioUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,63 +251,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B74249392B34153A008040AF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B74249432B34153A008040AF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B727FDD62B343023002F9A28 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint --strict --config ../.swiftlint.yml\nelse\n  echo \"error: SwiftLint does not exist\"\n  exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B74249272B341538008040AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74249762B3415CA008040AF /* NetworkManager.swift in Sources */,
+				B74249752B3415CA008040AF /* JSONParameterEncoder.swift in Sources */,
+				B74249742B3415CA008040AF /* URLParameterEncoder.swift in Sources */,
+				B74249942B342488008040AF /* LoginView.swift in Sources */,
+				B74249832B3415CA008040AF /* HTTPTask.swift in Sources */,
+				B74249772B3415CA008040AF /* SevenWindsStudioEndpoint.swift in Sources */,
+				B742498D2B34179F008040AF /* LoginResponse.swift in Sources */,
+				B74249902B341B34008040AF /* LoginViewModel.swift in Sources */,
+				B74249862B3415CA008040AF /* EndpointType.swift in Sources */,
+				B7D081FF2B342AB700556883 /* LocationResponse.swift in Sources */,
+				B74249842B3415CA008040AF /* HTTPMethod.swift in Sources */,
+				B74249852B3415CA008040AF /* Router.swift in Sources */,
+				B74249732B3415CA008040AF /* ParameterEncoding.swift in Sources */,
 				B74249312B341538008040AF /* ContentView.swift in Sources */,
 				B742492F2B341538008040AF /* SevenWindsStudioApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B74249372B34153A008040AF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B74249402B34153A008040AF /* SevenWindsStudioTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B74249412B34153A008040AF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B742494C2B34153A008040AF /* SevenWindsStudioUITestsLaunchTests.swift in Sources */,
-				B742494A2B34153A008040AF /* SevenWindsStudioUITests.swift in Sources */,
+				B74249822B3415CA008040AF /* NetworkRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B742493D2B34153A008040AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B742492A2B341538008040AF /* SevenWindsStudio */;
-			targetProxy = B742493C2B34153A008040AF /* PBXContainerItemProxy */;
-		};
-		B74249472B34153A008040AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B742492A2B341538008040AF /* SevenWindsStudio */;
-			targetProxy = B74249462B34153A008040AF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B742494D2B34153A008040AF /* Debug */ = {
@@ -332,7 +337,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -347,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -421,10 +426,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SevenWindsStudio/Preview Content\"";
 				DEVELOPMENT_TEAM = P47CZ87RVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SevenWindsStudio/Resourses/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,10 +455,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SevenWindsStudio/Preview Content\"";
 				DEVELOPMENT_TEAM = P47CZ87RVS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SevenWindsStudio/Resourses/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -469,82 +474,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B74249532B34153A008040AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P47CZ87RVS;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ubahwin.SevenWindsStudioTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SevenWindsStudio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SevenWindsStudio";
-			};
-			name = Debug;
-		};
-		B74249542B34153A008040AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P47CZ87RVS;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ubahwin.SevenWindsStudioTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SevenWindsStudio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SevenWindsStudio";
-			};
-			name = Release;
-		};
-		B74249562B34153A008040AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P47CZ87RVS;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ubahwin.SevenWindsStudioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SevenWindsStudio;
-			};
-			name = Debug;
-		};
-		B74249572B34153A008040AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P47CZ87RVS;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ubahwin.SevenWindsStudioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SevenWindsStudio;
 			};
 			name = Release;
 		};
@@ -565,24 +494,6 @@
 			buildConfigurations = (
 				B74249502B34153A008040AF /* Debug */,
 				B74249512B34153A008040AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B74249522B34153A008040AF /* Build configuration list for PBXNativeTarget "SevenWindsStudioTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B74249532B34153A008040AF /* Debug */,
-				B74249542B34153A008040AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B74249552B34153A008040AF /* Build configuration list for PBXNativeTarget "SevenWindsStudioUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B74249562B34153A008040AF /* Debug */,
-				B74249572B34153A008040AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
