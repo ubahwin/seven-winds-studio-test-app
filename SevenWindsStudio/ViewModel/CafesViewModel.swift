@@ -5,6 +5,7 @@ import SwiftUI
 class CafesViewModel: ObservableObject {
     private let networkManager = NetworkManager()
     @Published var cafes: [Cafe] = []
+    @Published var order: [Coffee] = []
 
     @AppStorage("isEntered") var isEntered: Bool?
 
@@ -27,6 +28,26 @@ class CafesViewModel: ObservableObject {
 
                 DispatchQueue.main.async {
                     self.cafes = newCafes
+                }
+            }
+        }
+    }
+
+    func loadCafe(id: Int) {
+        networkManager.loadCafe(id: id) { success, error in
+            if let error = error {
+                print(error)
+                return
+            }
+
+            if let order = success {
+                var newOrder = [Coffee]()
+                for coffee in order {
+                    newOrder.append(coffee.mapToCoffee)
+                }
+
+                DispatchQueue.main.async {
+                    self.order = newOrder
                 }
             }
         }

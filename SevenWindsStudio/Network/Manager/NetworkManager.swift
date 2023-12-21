@@ -82,4 +82,13 @@ class NetworkManager {
             self.processResponse(data: data, response: response, error: error, completion: completion)
         }
     }
+
+    func loadCafe(
+        id: Int,
+        completion: @escaping (_ success: CafeResponse?, _ error: String?) -> Void
+    ) {
+        router.request(.loadCafe(id: id)) { data, response, error in
+            self.processResponse(data: data, response: response, error: error, completion: completion)
+        }
+    }
 }

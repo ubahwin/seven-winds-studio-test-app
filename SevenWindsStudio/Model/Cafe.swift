@@ -13,7 +13,7 @@ struct Cafe: Identifiable, Equatable {
     }
 }
 
-extension CafeResponse {
+extension ShortCafeResponse {
     var mapToCafe: Cafe {
         let coordinate = CLLocationCoordinate2D(
             latitude: Double(self.point?.latitude ?? "") ?? 0,

@@ -29,6 +29,9 @@
 		B7662CF42B34708B00855958 /* CafesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7662CF32B34708B00855958 /* CafesViewModel.swift */; };
 		B7662CF72B3473F200855958 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7662CF62B3473F200855958 /* Cafe.swift */; };
 		B7662CF92B34744E00855958 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7662CF82B34744E00855958 /* Coffee.swift */; };
+		B7662CFF2B348D4600855958 /* CafeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7662CFE2B348D4600855958 /* CafeResponse.swift */; };
+		B7662D032B348FC200855958 /* CafeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7662D022B348FC200855958 /* CafeDetailView.swift */; };
+		B7662D052B34961300855958 /* CoffeeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7662D042B34961300855958 /* CoffeeCellView.swift */; };
 		B7D081FF2B342AB700556883 /* CafesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D081FE2B342AB700556883 /* CafesResponse.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		B7662CF32B34708B00855958 /* CafesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesViewModel.swift; sourceTree = "<group>"; };
 		B7662CF62B3473F200855958 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		B7662CF82B34744E00855958 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		B7662CFE2B348D4600855958 /* CafeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeResponse.swift; sourceTree = "<group>"; };
+		B7662D022B348FC200855958 /* CafeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailView.swift; sourceTree = "<group>"; };
+		B7662D042B34961300855958 /* CoffeeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCellView.swift; sourceTree = "<group>"; };
 		B7D081FE2B342AB700556883 /* CafesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +167,7 @@
 			children = (
 				B742498C2B34179F008040AF /* LoginResponse.swift */,
 				B7D081FE2B342AB700556883 /* CafesResponse.swift */,
+				B7662CFE2B348D4600855958 /* CafeResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +200,8 @@
 				B74249932B342488008040AF /* LoginView.swift */,
 				B7662CED2B34704000855958 /* MapView.swift */,
 				B7662CEF2B34704F00855958 /* CafeListView.swift */,
+				B7662D022B348FC200855958 /* CafeDetailView.swift */,
+				B7662D042B34961300855958 /* CoffeeCellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B74249762B3415CA008040AF /* NetworkManager.swift in Sources */,
+				B7662CFF2B348D4600855958 /* CafeResponse.swift in Sources */,
 				B74249752B3415CA008040AF /* JSONParameterEncoder.swift in Sources */,
 				B74249742B3415CA008040AF /* URLParameterEncoder.swift in Sources */,
 				B74249942B342488008040AF /* LoginView.swift in Sources */,
@@ -312,11 +322,13 @@
 				B7662CF72B3473F200855958 /* Cafe.swift in Sources */,
 				B74249902B341B34008040AF /* LoginViewModel.swift in Sources */,
 				B7662CF42B34708B00855958 /* CafesViewModel.swift in Sources */,
+				B7662D032B348FC200855958 /* CafeDetailView.swift in Sources */,
 				B74249862B3415CA008040AF /* EndpointType.swift in Sources */,
 				B7662CEE2B34704000855958 /* MapView.swift in Sources */,
 				B7D081FF2B342AB700556883 /* CafesResponse.swift in Sources */,
 				B74249842B3415CA008040AF /* HTTPMethod.swift in Sources */,
 				B74249852B3415CA008040AF /* Router.swift in Sources */,
+				B7662D052B34961300855958 /* CoffeeCellView.swift in Sources */,
 				B74249732B3415CA008040AF /* ParameterEncoding.swift in Sources */,
 				B74249312B341538008040AF /* ContentView.swift in Sources */,
 				B742492F2B341538008040AF /* SevenWindsStudioApp.swift in Sources */,

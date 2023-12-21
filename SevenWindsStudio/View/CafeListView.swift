@@ -2,18 +2,15 @@ import SwiftUI
 
 struct CafeListView: View {
     @ObservedObject var cafesVM: CafesViewModel
-    @AppStorage("token") var token: String?
 
     var body: some View {
         List(cafesVM.cafes) { cafe in
             NavigationLink {
-                EmptyView()
+                CafeDetailView(id: cafe.id, cafesVM: cafesVM)
             } label: {
-                VStack {
-                    Text(cafe.name)
-                        .foregroundStyle(.black)
-                    Text("2 km")
-                }
+                Text(cafe.name)
+                    .foregroundStyle(.black)
+                    .padding()
             }
         }
         .refreshable {

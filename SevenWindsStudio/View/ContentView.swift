@@ -28,6 +28,7 @@ struct ContentView: View {
                 .toolbarBackground(.visible, for: .tabBar)
             }
             .navigationTitle("Кафе")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItemGroup(placement: .secondaryAction) {
                     Button("Обновить") {
