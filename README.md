@@ -14,7 +14,8 @@
 Перейти к кофейне можно через карту, нажав на пин, и через список, переключаясь через таббар. Выбранные кофе переходят в следующее окно.
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; column-gap: 24px; row-gap: 20px;">
-  <img src="img/1.png" style="width:200px;">
+  <img src="img/1.1.png" style="width:200px;">
+  <img src="img/1.2.png" style="width:200px;">
   <img src="img/2.png" style="width:200px;">
   <img src="img/3.png" style="width:200px;">
   <img src="img/4.png" style="width:200px;">
