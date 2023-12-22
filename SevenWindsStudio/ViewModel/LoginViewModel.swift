@@ -33,4 +33,21 @@ class LoginViewModel: ObservableObject {
             }
         }
     }
+
+    func register(login: String, password: String) {
+        networkManager.register(login: login, password: password) { success, error in
+            if let error = error {
+                print(error)
+                return
+            }
+
+            if let token = success?.token, let tokenLifetime = success?.tokenLifetime {
+                self.saveToken(token: token, lifetime: tokenLifetime)
+
+                DispatchQueue.main.async {
+                    self.isEntered = true
+                }
+            }
+        }
+    }
 }

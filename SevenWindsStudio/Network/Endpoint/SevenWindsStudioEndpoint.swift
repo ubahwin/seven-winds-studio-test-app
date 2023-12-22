@@ -4,6 +4,7 @@ public enum SevenWindsStudioApi {
     case auth(login: String, password: String)
     case loadCafes
     case loadCafe(id: Int)
+    case register(login: String, password: String)
 }
 
 extension SevenWindsStudioApi: EndpointType {
@@ -15,6 +16,7 @@ extension SevenWindsStudioApi: EndpointType {
     var path: String {
         switch self {
         case .auth: return "auth/login"
+        case .register: return "auth/register"
         case .loadCafes: return "locations"
         case .loadCafe(let id): return "location/\(id)/menu"
         }
@@ -22,14 +24,14 @@ extension SevenWindsStudioApi: EndpointType {
 
     var httpMethod: HTTPMethod {
         switch self {
-        case .auth: return .post
+        case .auth, .register: return .post
         default: return .get
         }
     }
 
     var headers: HTTPHeaders? {
         switch self {
-        case .auth:
+        case .auth, .register:
             return ["User-Agent": "PostmanRuntime/7.36.0"]
         default:
             return [
@@ -41,7 +43,7 @@ extension SevenWindsStudioApi: EndpointType {
 
     var body: Parameters? {
         switch self {
-        case .auth(let login, let password): return [
+        case .auth(let login, let password), .register(let login, let password): return [
             "login": login,
             "password": password
         ]

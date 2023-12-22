@@ -75,6 +75,16 @@ class NetworkManager {
         }
     }
 
+    func register(
+        login: String,
+        password: String,
+        completion: @escaping (_ success: LoginResponse?, _ error: String?) -> Void
+    ) {
+        router.request(.register(login: login, password: password)) { data, response, error in
+            self.processResponse(data: data, response: response, error: error, completion: completion)
+        }
+    }
+
     func loadCafes(
         completion: @escaping (_ success: CafesResponse?, _ error: String?) -> Void
     ) {
