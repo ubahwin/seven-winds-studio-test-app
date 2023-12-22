@@ -5,29 +5,32 @@ struct CafeDetailView: View {
     var id: Int
     @ObservedObject var cafesVM: CafesViewModel
 
+    var columns: [GridItem] = [
+        GridItem(.adaptive(minimum: 300, maximum: 400)),
+        GridItem(.adaptive(minimum: 300, maximum: 400))
+    ]
+
     var body: some View {
         NavigationStack {
             ScrollView {
-                LazyVGrid(columns: [GridItem(), GridItem()]) {
-                    ForEach(cafesVM.order) { coffee in
-                        VStack {
-                            AsyncImage(url: coffee.image) { image in
-                                image
-                                    .resizable()
-                                    .scaledToFit()
-                            } placeholder: {
-                                Image(systemName: "cup.and.saucer")
-                                    .resizable()
-                                    .scaledToFit()
-                            }
-                            Text(coffee.name)
-                            Text("\(coffee.amount.description) ₽")
-                                .bold()
-                        }
+                LazyVGrid(
+                    columns: columns,
+                    alignment: .center,
+                    pinnedViews: [.sectionHeaders, .sectionFooters]
+                ) {
+                    ForEach($cafesVM.order) { coffee in
+                        CoffeeCellView(coffee: coffee)
                     }
-                    .navigationTitle("Меню")
                 }
+                .navigationTitle("Меню")
             }
+            NavigationLink {
+                OrderView(cafesVM: cafesVM)
+            } label: {
+                Text("Перейти к оплате")
+            }
+            .buttonStyle(.borderedProminent)
+            .padding()
         }
         .onAppear {
             cafesVM.loadCafe(id: id)
