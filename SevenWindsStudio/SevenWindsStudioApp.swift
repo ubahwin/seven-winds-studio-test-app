@@ -3,6 +3,7 @@ import SwiftUI
 @main
 struct SevenWindsStudioApp: App {
     @AppStorage("isEntered") var isEntered: Bool?
+    @Environment(\.colorScheme) var colorScheme
 
     init() {
         if !isTokenValid {
@@ -14,8 +15,10 @@ struct SevenWindsStudioApp: App {
         WindowGroup {
             if isEntered ?? false {
                 ContentView()
+                    .preferredColorScheme(.light)
             } else {
                 LoginView()
+                    .preferredColorScheme(.light)
             }
         }
     }
