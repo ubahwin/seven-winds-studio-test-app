@@ -19,10 +19,6 @@ struct MapView: View {
                 }
             }
         }
-        .mapControls {
-            MapUserLocationButton()
-            MapCompass()
-        }
     }
 }
 

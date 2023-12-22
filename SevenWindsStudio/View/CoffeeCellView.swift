@@ -33,7 +33,6 @@ struct CoffeeCellView: View {
                         }
                         HStack {
                             Text(coffee.count.description)
-                                .italic()
                             Stepper("", value: $coffee.count, in: 0...10)
                         }
                         .padding(.horizontal)

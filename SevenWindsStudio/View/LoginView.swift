@@ -4,34 +4,41 @@ struct LoginView: View {
     @StateObject private var loginVM = LoginViewModel()
     @State var email: String = ""
     @State var password: String = ""
+    @State var openRegistration = false
 
     var body: some View {
-        VStack {
+        NavigationStack {
             VStack(alignment: .leading) {
-                Text("Почта")
+                Text("Логин")
                 TextField("Логин", text: $email)
                     .textFieldStyle(.roundedBorder)
             }
             .padding()
             VStack(alignment: .leading) {
                 Text("Пароль")
-                TextField("*******", text: $password)
+                SecureField("*******", text: $password)
                     .textFieldStyle(.roundedBorder)
             }
             .padding()
+
+            Button("Регистрация") {
+                openRegistration = true
+            }
+
             Button("Войти") {
                 loginVM.login(login: email, password: password)
             }
             .buttonStyle(.borderedProminent)
             .padding()
-
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Вход")
         }
         .padding()
         .onTapGesture {
             loginVM.hideKeyboard()
         }
-        .fullScreenCover(isPresented: $loginVM.isEntered) {
-            ContentView()
+        .fullScreenCover(isPresented: $openRegistration) {
+            RegistrationView(loginVM: loginVM)
         }
     }
 }
