@@ -1,22 +1,50 @@
 import SwiftUI
 
 struct CoffeeCellView: View {
-    var name: String
-    var amount: Int
-    var image: URL?
+    @Binding var coffee: Coffee
 
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 10)
-                .frame(minWidth: 100, maxWidth: 300, minHeight: 140, maxHeight: 300)
-        }
+        RoundedRectangle(cornerRadius: 10)
+            .frame(idealWidth: 370, idealHeight: 220)
+            .foregroundStyle(.white)
+            .shadow(radius: 4)
+            .overlay {
+                VStack {
+                    AsyncImage(url: coffee.image) { image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(.rect(cornerRadius: 10))
+                    } placeholder: {
+                        Image(systemName: "cup.and.saucer")
+                            .resizable()
+                            .scaledToFit()
+                    }
+                    .frame(idealHeight: 120)
+                    Spacer()
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Text(coffee.name)
+                            Spacer()
+                            Text("\(coffee.amount) ₽")
+                                .bold()
+                            Spacer()
+                        }
+                        HStack {
+                            Text(coffee.count.description)
+                                .italic()
+                            Stepper("", value: $coffee.count, in: 0...10)
+                        }
+                        .padding(.horizontal)
+                    }
+                    .padding(10)
+                }
+            }
+            .padding(5)
     }
 }
 
 #Preview {
-    CoffeeCellView(
-        name: "latte",
-        amount: 124,
-        image: URL(string: "https://upload.wikimedia.org/wikipedia/commons/1/16/Classic_Cappuccino.jpg")
-    )
+    CoffeeCellView(coffee: Binding.constant(Coffee(id: 1, name: "ad", amount: 21)))
 }
