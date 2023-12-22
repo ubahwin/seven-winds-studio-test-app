@@ -1,10 +1,12 @@
-import Foundation
+import SwiftUI
 
 struct Coffee: Identifiable {
     var id: Int
     var name: String
     var amount: Int
     var image: URL?
+
+    var count: Int = 0
 }
 
 extension CoffeeResponse {

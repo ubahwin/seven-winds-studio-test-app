@@ -4,8 +4,6 @@ import MapKit
 struct Cafe: Identifiable, Equatable {
     var id: Int
     var name: String
-//    var distanceKm: Int
-//    var menu: [Coffee]
     var coordinate: CLLocationCoordinate2D
 
     static func == (lhs: Cafe, rhs: Cafe) -> Bool {
