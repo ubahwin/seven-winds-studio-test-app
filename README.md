@@ -7,9 +7,15 @@
     <img src="img/task.png" alt="AppIcon" height="200">
 </div>
 
+Токен хранится n-ое время и при входе в приложение проверяется его TTL (time-to-live).
+
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; column-gap: 24px; row-gap: 20px;">
   <img src="img/1.png" style="width:200px;">
   <img src="img/2.png" style="width:200px;">
+  <img src="img/3.png" style="width:200px;">
+  <img src="img/4.png" style="width:200px;">
+  <img src="img/5.png" style="width:200px;">
+  <img src="img/6.png" style="width:200px;">
 </div>
 
 ## Технологии и инструменты
